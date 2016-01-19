@@ -19,7 +19,7 @@ public boolean palindrome(String word)
   //your code here]
   String b = "";
   for(int i =0; i<word.length(); i++){
-   if(!word.substring(i,i+1).equals(" ")){b=b+word.substring(i,i+1);}
+   if(!word.substring(i,i+1).matches(" ") && Character.isLetter(word.charAt(i))){b=b+word.substring(i,i+1);}
   }
   
   String a = new String();
